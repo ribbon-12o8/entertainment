@@ -2,48 +2,149 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>はじめてのサイト</title>
-</head>
-
-<body>
-  <h1>はじめまして！</h1>
-  <p>これが私のホームページです✨</p>
-
-  <h2>好きなもの</h2>
-  <ul>
-    <li>推し</li>
-    <li>ショーパブ</li>
-    <li>音楽</li>
-  </ul>
-</body>
-</html>
-
-<head>
-  <meta charset="UTF-8">
-  <title>わたしのサイト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>まとめ</title>
 
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #fff0f5;
-      font-family: "Arial", sans-serif;
-      color: #333;
-      margin: 40px;
+      margin: 20px;
+      background: linear-gradient(135deg, #fdeeff, #e0f7ff);
+      font-family: "Helvetica Neue", sans-serif;
+      color: #59240c;
     }
 
-    h1 {
-      color: #ff69b4;
+    .card {
+      background: linear-gradient(180deg, #ffffff, #f9f9ff);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 20px;
+      transition: 0.3s;
     }
 
-    h2 {
-      color: #ff85a2;
-      border-bottom: 2px dashed #ffb6c1;
-      padding-bottom: 5px;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     }
+
+    .card:nth-of-type(1) { animation-delay: 0.2s; }
+    .card:nth-of-type(2) { animation-delay: 0.4s; }
+    .card:nth-of-type(3) { animation-delay: 0.6s; }
+    .card:nth-of-type(4) { animation-delay: 0.8s; }
+    .card:nth-of-type(5) { animation-delay: 1s; } 
 
     ul {
-      background-color: white;
+      list-style-type: none;
+      background: linear-gradient(135deg, #bbefff, #c6d3ff);
       padding: 15px;
       border-radius: 10px;
     }
+
+    li::before {
+      content: "💙 ";
+    }
+
+    li {
+      transition: 0.3s;
+      margin: 8px 0;
+    }
+
+    li:hover {
+      transform: scale(1.1);
+      color: #ff4da6;
+    }
+    
+    li:hover::before {
+      content: "💖 ";
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+       opacity: 1;
+       transform: translateY(0);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: #cb0066;
+    }
+
+    h2 {
+      color: #787fff;
+      border-bottom: 2px dashed #1c4c95;
+      padding-bottom: 5px;
+    }
   </style>
 </head>
+
+<body>
+  <body ontouchstart="">
+  <h1>Welcome!</h1>
+
+  <div class="card fade-in">
+    <h2>About me</h2>
+    <p>ディズニーと推しに青春ささげてます</p>
+    <p>大学1年次　TDR 31回</p>
+    <p>大学2年次　IFT 73回</p>
+    <p>大学3年次　推しの現場 60回</p>
+  </div>
+
+  <div class="card fade-in"> 
+    <h2>Tokyo Disney Resort</h2>
+    <p>生まれたときから親の英才教育受けてた笑</p>
+    <p>大学1年次は31回。そのうち13回はDハロ期間。</p>
+    <ul>
+     <li>Today</li>
+     <li>ハモカラ</li>
+     <li>スプブ</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>Immersive Fort Tokyo</h2>
+    <p>2024.03.08~2025.02.24</p>
+    <p>この間73回。わたしの大2はIFTに捧げました。</p>
+    <ul>
+      <li>ザ・キャバレー　219ステ</li>
+      <li>パーティ・フェスタ　100ステ</li>
+      <li>ハロウィン・マスカレード　41ステ</li>
+      <li>ハロウィン・パーチ―　20ステ</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>CHARM</h2>
+    <p>My First Visit 2024.12.08</p>
+    <ul>
+      <li>season2＠ダンカラ 3回</li>
+      <li>season3＠Bar KIZUKI　10回</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>Men's Show BAR H</h2>
+    <p>My First Visit 2025.04.11</p>
+    <ul>
+      <li>通常&H2 ~2026.02.02　22回</li>
+      <li>通常&H2 2026.02.24~　4回</li>
+      <li>H Kitchen　3回</li>
+      <li>その他イベント(周年、新春祭)　2回</li>
+    </ul>
+  </div>
+
+</body>
+</html>
