@@ -1,33 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: lightblue;
-            margin: 10px;
-        }
-        .box:hover {
-            background-color: lightcoral;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>まとめ</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 20px;
+      background: linear-gradient(135deg, #fdeeff, #e0f7ff);
+      font-family: "Helvetica Neue", sans-serif;
+      color: #59240c;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #ffffff, #f9f9ff);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .card:nth-of-type(1) { animation-delay: 0.2s; }
+    .card:nth-of-type(2) { animation-delay: 0.4s; }
+    .card:nth-of-type(3) { animation-delay: 0.6s; }
+    .card:nth-of-type(4) { animation-delay: 0.8s; }
+    .card:nth-of-type(5) { animation-delay: 1s; } 
+
+    ul {
+      list-style-type: none;
+      background: linear-gradient(135deg, #bbefff, #c6d3ff);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    li::before {
+      content: "💙 ";
+    }
+
+    li {
+      transition: 0.3s;
+      margin: 8px 0;
+    }
+
+    li:hover {
+      transform: scale(1.1);
+      color: #ff4da6;
+    }
+
+    li:hover::before {
+      content: "💖 ";
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+       opacity: 1;
+       transform: translateY(0);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: #cb0066;
+    }
+
+    h2 {
+      color: #787fff;
+      border-bottom: 2px dashed #1c4c95;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      color: #1c4c95;
+    }
+
+    h6 {
+      color: #1c4c95;
+    }
+
+  </style>
 </head>
+
+
 <body>
-    <div class="container">
-        <div class="box"></div>
-        <div class="box"></div
-        <div class="box"></div>
-    </div>
+
+  <div class="card fade-in">
+    <h2>Immersive Fort Tokyo</h2>
+    <h3>おにーさんと出会った場所</h3>
+    <h6>2024.03.08~2025.02.23</h6>
+    <p>Total　39回</p>
+    <ul>
+      <li>ザ・キャバレー　219ステ</li>
+      <li>パーティ・フェスタ　100ステ</li>
+      <li>ハロウィン・マスカレード　41ステ</li>
+      <li>ハロウィン・パーチ―　4ステ</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>ハブニコ</h2>
+    <h3>初ショーパブであり初外部でした</h3>
+    <h6>My First Visit　2024.10.13</h6>
+    <p>Total　2回</p>
+    <ul>
+      <li>＠Shisui deux. 2回</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>CHARM</h2>
+    <h3>きらきらで大好きだった～</h3>
+    <h6>My First Visit　2024.12.08</h6>
+    <p>Total　13回</p>
+    <ul>
+      <li>season2＠ダンカラ　3回</li>
+      <li>season3＠Bar KIZUKI　8回</li>
+      <li>Ryoday Birthday　2回</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>Men's Show BAR H</h2>
+    <h3>そろそろただいまって言ってもいいと思ってる</h3>
+    <h6>My First Visit　2025.04.11</h6>
+    <p>Total　32回</p>
+    <ul>
+      <li>通常&H2　~2026.02.02　22回</li>
+      <li>通常&H2　2026.02.24~　5回</li>
+      <li>H Kitchen　3回</li>
+      <li>その他イベント(周年、新春祭)　2回</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>CRAZY WeDNESDAY</h2>
+    <h3>豪華でおしゃれなショータイムが大好き</h3>
+    <h6>My First Visit　2025.06.18</h6>
+    <p>Total　5回</p>
+    <ul>
+      <li>CRAZY KiNG　3回</li>
+      <li>yuriBARbie　2回</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>THE GRAND TOKYO</h2>
+    <h3>行きたいという気持ちはすごくあるんです</h3>
+    <h6>My First Time　2025.02.03</h6>
+    <p>Total　3回</p>
+    <ul>
+      <li>Color of Page　2回</li>
+      <li>MAGIC MIKE　1回</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>KiranaH</h2>
+    <h3>新ショー早く観にいきたいと思っております</h3>
+    <h6>My First Visit　2025.07.26</h6>
+    <p>Total　2回</p>
+    <ul>
+      <li>KiranaH　1回</li>
+      <li>KiranaH高島屋出張ショー　1回</li>
+    </ul>
+  </div>
+
+  <div class="card fade-in">
+    <h2>Others</h2>
+    <h3>どれも楽しかったな～</h3>
+    <ul>
+      <li>Imagination　25.02.28</li>
+      <li>It's Party　25.03.23</li>
+      <li>Represent　25.04.18</li>
+      <li>Ready Go　25.05.08</li>
+      <li>HARUKI's Birthday Party　25.06.01</li>
+      <li>Imagination BD Concert　25.07.31</li>
+      <li>アヴァロン学園　26.03.03</li>
+    </ul>
+  </div>
 </body>
 </html>
