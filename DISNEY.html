@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DISNEY</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 20px;
+      background: linear-gradient(135deg, #fdeeff, #e0f7ff);
+      font-family: "Helvetica Neue", sans-serif;
+      color: #59240c;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #ffffff, #f9f9ff);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .card:nth-of-type(1) { animation-delay: 0.2s; }
+    .card:nth-of-type(2) { animation-delay: 0.4s; }
+    .card:nth-of-type(3) { animation-delay: 0.6s; }
+    .card:nth-of-type(4) { animation-delay: 0.8s; }
+    .card:nth-of-type(5) { animation-delay: 1s; } 
+
+    ul {
+      list-style-type: none;
+      background: linear-gradient(135deg, #bbefff, #c6d3ff);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    li::before {
+      content: "💙 ";
+    }
+
+    li {
+      transition: 0.3s;
+      margin: 8px 0;
+    }
+
+    li:hover {
+      transform: scale(1.1);
+      color: #ff4da6;
+    }
+
+    li:hover::before {
+      content: "💖 ";
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+       opacity: 1;
+       transform: translateY(0);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: #cb0066;
+    }
+
+    h2 {
+      color: #787fff;
+      border-bottom: 2px dashed #1c4c95;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      color: #1c4c95;
+    }
+
+    h4 {
+      color: #1c4c95;
+    }
+
+    h6 {
+      text-align: center;
+      color: #59240c;
+    }
+
+    a
+    {
+      color: #1c4c95;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      transform: scale(1.1);
+      color: #ff4da6;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <body ontouchstart="">
+    <h1>Disney</h1>
+
+    <div class="card fade-in"> 
+      <h2>Disney</h2>
+      <ul>
+        <li>Tokyo Disney Resort</li>
+        <li>映画・音楽</li>
+        <li>オンクラ・インコン</li>
+      </ul>
+
+    <div class="card fade-in"> 
+      <h2><a href="TDR.html">Tokyo Disney Resort</a></h2>
+      <p>生まれたときから親の英才教育受けてた</p>
+      <p>ディズニー近いからって大学決めました</p>
+      <p>大学1年次は31回通った。そのうち13回は秋。</p>
+      <p>大2は6回だけ。大3は4回程度。</p>
+      <p>デジ・ラプ・ニック該当です</p>
+      <p></p>
+      <ul>
+        <li>東京ディズニーランド</li>
+        <li>東京ディズニーシー</li>
+        <li>舞浜散歩界隈</li>
+      </ul>
+    </div>
+
+    <div class="card fade-in"> 
+      <h2>Favorite Movies</h2>
+      <ul>
+        <li>塔の上のラプンツェル</li>
+        <li>ズートピア</li>
+        <li>ディセンダントシリーズ</li>
+      </ul>
+    </div>
+
+    <div class="card fade-in"> 
+      <h2>Favorite Songs</h2>
+      <ul>
+        <li>I see the light</li>
+        <li>So close</li>
+      </ul>
+    </div>
+
+        <div class="card fade-in"> 
+      <h2>Concerts</h2>
+      <ul>
+        <li>Disney on Classic 2018, 2022</li>
+        <li>TDR 40th anniv. In Conert</li>
+        <li>TDS 25th anniv. In Concert</li>
+      </ul>
+    </div>
+
+  </body>
